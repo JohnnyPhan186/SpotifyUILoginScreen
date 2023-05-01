@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spotify_black_dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in to continue"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/spotifyLogo"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:background="@color/spotify_black_dark"
+        android:textColor="@color/white"
+        android:textCursorDrawable = "@null"
+        android:hint="Enter Email or Username"
+        android:textColorHint = "@color/spotify_gray_light"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/loginText"
+        app:layout_constraintEnd_toEndOf="@id/loginText"
+        app:layout_constraintTop_toBottomOf="@id/loginText"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:background="@color/spotify_black_dark"
+        android:textColor="@color/white"
+        android:textCursorDrawable = "@null"
+        android:hint="Enter Password"
+        android:textColorHint ="@color/spotify_gray_light"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/loginText"
+        app:layout_constraintEnd_toEndOf="@id/loginText"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:text="Log in"
+        app:layout_constraintStart_toStartOf="@id/loginText"
+        app:layout_constraintEnd_toEndOf="@id/loginText"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <ImageView
+        android:id="@+id/spotifyLogo"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spotify_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
